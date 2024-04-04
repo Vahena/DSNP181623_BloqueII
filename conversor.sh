@@ -160,34 +160,34 @@ while true; do
                     case $origen in 
                         "b")
                             case $destino in 
-                                b) resultado=$cantidad ;;
-                                kb) resultado=$(echo "scale=3; $cantidad / 1024" | bc) ;;
-                                mb) resultado=$(echo "scale=3; $cantidad / 1048576" | bc) ;;
-                                gb) resultado=$(echo "scale=3; $cantidad / 1073741824" | bc) ;;
+                                "b") resultado=$cantidad ;;
+                                "kb") resultado=$(echo "scale=3; $cantidad / 1024" | bc) ;;
+                                "mb") resultado=$(echo "scale=3; $cantidad / 1048576" | bc) ;;
+                                "gb") resultado=$(echo "scale=3; $cantidad / 1073741824" | bc) ;;
                                 *) echo "Unidad de destino no válida" ;;
                             esac ;;
                         "kb") 
                             case $destino in 
-                                b) resultado=$(echo "scale=3; $cantidad * 1024" | bc) ;;
-                                kb) resultado=$cantidad ;;
-                                mb) resultado=$(echo "scale=3; $cantidad / 1024" | bc) ;;
-                                gb) resultado=$(echo "scale=3; $cantidad / 1048576" | bc) ;;
+                                "b") resultado=$(echo "scale=3; $cantidad * 1024" | bc) ;;
+                                "kb") resultado=$cantidad ;;
+                                "mb") resultado=$(echo "scale=3; $cantidad / 1024" | bc) ;;
+                                "gb") resultado=$(echo "scale=3; $cantidad / 1048576" | bc) ;;
                                 *) echo "Unidad de destino no válida" ;;
                             esac ;;
                         "mb") 
                             case $destino in 
-                                b) resultado=$(echo "scale=3; $cantidad * 1048576" | bc) ;;
-                                kb) resultado=$(echo "scale=3; $cantidad * 1024" | bc) ;;
-                                mb) resultado=$cantidad ;;
-                                gb) resultado=$(echo "scale=3; $cantidad / 1024" | bc) ;;
+                                "b") resultado=$(echo "scale=3; $cantidad * 1048576" | bc) ;;
+                                "kb") resultado=$(echo "scale=3; $cantidad * 1024" | bc) ;;
+                                "mb") resultado=$cantidad ;;
+                                "gb") resultado=$(echo "scale=3; $cantidad / 1024" | bc) ;;
                                 *) echo "Unidad de destino no válida" ;;
                             esac ;;
                         "gb")
                             case $destino in 
-                                b)resultado=$(echo "scale=3; $cantidad * 1073741824" | bc) ;;
-                                kb) resultado=$(echo "scale=3; $cantidad * 1048576" | bc) ;;
-                                mb) resultado=$(echo "scale=3; $cantidad * 1024" | bc) ;;
-                                gb) resultado=$cantidad ;;
+                                "b")resultado=$(echo "scale=3; $cantidad * 1073741824" | bc) ;;
+                                "kb") resultado=$(echo "scale=3; $cantidad * 1048576" | bc) ;;
+                                "mb") resultado=$(echo "scale=3; $cantidad * 1024" | bc) ;;
+                                "gb") resultado=$cantidad ;;
                                 *) echo "Unidad de destino no válida" ;;
                             esac ;;
                     esac
